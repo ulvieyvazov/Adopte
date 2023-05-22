@@ -1,0 +1,210 @@
+.home-container {
+     width: 100%;
+     .home-parent {
+          width: 100%;
+
+          .bg-image {
+               width: 100%;
+               height: 90vh;
+               background-image: url("https://preview.colorlib.com/theme/adopted/img/slider-1.jpg.webp ");
+               background-repeat: no-repeat;
+               background-size: 100%;
+               display: flex;
+
+               .div {
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    .text {
+                         max-width: 500px;
+                         width: 48%;
+                         span {
+                              font-weight: 400;
+                              font-size: 40px;
+                              line-height: 72px;
+                              text-decoration: none;
+                              transform: none;
+                              font-family: "Sacramento";
+                              letter-spacing: 0;
+                         }
+
+                         h1 {
+                              font-weight: 800;
+                              font-size: 40px;
+                              line-height: 48px;
+                              text-decoration: none;
+                              text-transform: uppercase;
+                              font-family: "Open Sans", sans-serif;
+                              letter-spacing: 0;
+                         }
+                         p {
+                              // font-weight: 300;
+                              font-size: 20px;
+                              line-height: 30px;
+                              text-decoration: none;
+                              transform: none;
+                              font-family: "Open Sans", sans-serif;
+                              letter-spacing: 0;
+                              padding: 25px 0;
+                         }
+                         a {
+                              padding: 14px 10px;
+                              background-color: #bc5148;
+                              color: white;
+                              border-radius: 4px;
+                         }
+                    }
+               }
+          }
+
+          .new{
+               width: 100%;
+               height: 90vh;
+               background-image: url("https://preview.colorlib.com/theme/adopted/img/slider-2.jpg.webp");
+               background-repeat: no-repeat;
+               background-size: 100%;
+               display: flex;
+
+          }
+
+          .new-section {
+               width: 80%;
+               margin: 0 auto;
+               display: flex;
+               gap: 50px;
+               align-items: center;
+               padding: 120px 0;
+               .left {
+                    width: 38%;
+
+                    img {
+                         width: 100%;
+                    }
+                    p {
+                         font-size: 20px;
+                    }
+
+                    button {
+                         margin: 10px 0;
+                         padding: 10px 20px;
+                         //     font-size: large;
+                         font-weight: 400;
+                         font-size: 20px;
+                         border-radius: 5px;
+                         line-height: 24px;
+                         text-decoration: none;
+                         transform: none;
+                         font-family: "Open Sans";
+                         letter-spacing: 0;
+                         border: 2px solid red;
+                    }
+               }
+               .right {
+                    width: 40%;
+
+                    h1 {
+                         margin-bottom: 100px;
+                    }
+               }
+          }
+
+          .cart-parent {
+               width: 80%;
+               margin: 0 auto;
+               .cart-top {
+                    padding: 110px 0;
+                    width: 45%;
+                    text-align: center;
+                    margin: 0 auto;
+                    h1 {
+                         font-weight: 900;
+                         font-size: 42px;
+                         line-height: 38.4px;
+                         text-decoration: none;
+                         transform: uppercase;
+                         font-family: "Open Sans", sans-serif;
+                         letter-spacing: 0;
+                    }
+                    p {
+                         font-weight: 500;
+                         font-size: 23px;
+                         line-height: 30px;
+                         text-decoration: none;
+                         transform: none;
+                         font-family: "Open Sans", sans-serif;
+                         letter-spacing: 0;
+                         padding: 25px 0;
+                         color: gray;
+                    }
+                    button {
+                         margin: 10px 0;
+                         padding: 14px 20px;
+                         //     font-size: large;
+                         font-weight: 400;
+                         font-size: 22px;
+                         border-radius: 5px;
+                         line-height: 24px;
+                         text-decoration: none;
+                         transform: none;
+                         font-family: "Open Sans";
+                         letter-spacing: 0;
+                         // border: 2px solid red;
+                         background-color: #bc5148;
+                         color: white;
+                    }
+               }
+
+               .cart {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: flex;
+                    gap: 20px;
+                    padding-bottom: 80px;
+                    .cart-child {
+                         width: 25%;
+
+                         img {
+                              width: 100%;
+                         }
+
+                         span {
+                              color: gray;
+                         }
+                    }
+               }
+          }
+
+          .form {
+               width: 80%;
+               padding: 100px 0;
+               margin: 0 auto;
+
+               h1 {
+                    font-weight: 900;
+                    font-size: 42px;
+                    line-height: 38.4px;
+                    text-decoration: none;
+                    transform: uppercase;
+                    font-family: "Open Sans", sans-serif;
+                    letter-spacing: 0;
+                    padding-bottom: 50px;
+               }
+
+               form{
+                    input{
+                         padding: 10px 80px;
+                         font-size: 25px;
+                    }
+                    button{
+                         padding: 15px 80px;
+                         margin-left: 40px;
+                         background-color: #bc5148;
+                         color: white;
+                         font-size: large;
+                         border-radius: 5px;
+                    }
+               }
+          }
+     }
+}

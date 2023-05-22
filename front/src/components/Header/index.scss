@@ -1,0 +1,53 @@
+.header-container {
+     width: 100%;
+     .header-parent {
+          width: 100%;
+
+          .header-top {
+               width: 100%;
+               background-color: #bc5148;
+               .head {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    .icons {
+                         display: flex;
+                         gap: 15px;
+                         color: black !important;
+                    }
+                    .login-head {
+                         font-size: large;
+                         span {
+                              padding: 0 10px;
+                         }
+                    }
+               }
+          }
+
+          .haeder-bottom {
+               width: 80%;
+               margin: 0 auto;
+               padding: 25px 0;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               h3 {
+                    font-weight: 400;
+                    size: 20px;
+                    line-height: 36px;
+                    text-decoration: none;
+                    transform: uppercase;
+                    font-family: "Open Sans";
+                    letter-spacing: 4px;
+               }
+
+               ul{
+                    display: flex;
+                    gap: 11px;
+                    font-size: large;
+               }
+          }
+     }
+}

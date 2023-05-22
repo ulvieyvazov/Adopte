@@ -1,0 +1,78 @@
+.footer-container{
+     width: 100%;
+     background-color: #bc5148;
+}
+
+.footer-parent{
+     width: 60%;
+     margin: 0 auto;
+     padding-top: 50px;
+     padding-bottom: 80px;
+     display: flex;
+     gap: 120px;
+}
+
+.about{
+     width: 25%;
+}
+
+.footer-parent h3{
+     color: white;
+     font-size: 16px;
+     font-weight: 300;
+     text-transform: uppercase;
+     margin: 0 auto;
+}
+
+.about p{
+     color: white;
+     padding: 18px 0;
+}
+
+.icons div{
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     border: 2px solid rgba(0, 0, 0, 0.5);
+     padding-top: 5px;
+     text-align: center;
+     color: yellow;
+}
+
+.icons{
+     padding-top: 25px;
+     display: flex;
+     gap: 8px;
+}
+
+.contact div{
+     padding-top: 10px;
+}
+.contact div span{
+     color: white;
+}
+.contact div p{
+     color: white;
+}
+
+li{
+     padding: 8px 0;
+     display: block;
+     list-style: none;
+}
+.links div{
+     padding-top: 10px;
+}
+
+.links div p{
+     padding: 8px 0;
+     color: yellow;
+}
+.end{
+     width: 100%;
+}
+.end-child{
+     margin: 0 auto;
+     width: 30%;
+     color: white;
+}
