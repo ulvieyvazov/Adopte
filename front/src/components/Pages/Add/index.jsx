@@ -8,7 +8,7 @@ import { AddSchema } from "../../../Schema/AddSchema";
 import axios from "axios";
 
 const Add = () => {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
   const [state, setState] = useState({
     img: "",
@@ -24,28 +24,28 @@ const Add = () => {
     resolver: yupResolver(AddSchema),
   });
 
-  // const getData = async () => {
-  //   const resp = await axios.get("http://localhost:6060/childs");
-  //   setData(resp.data);
-  // };
+  const getData = async () => {
+    const resp = await axios.get("http://localhost:6060/childs");
+    setData(resp.data);
+  };
 
 
-  const postChild = async(e) => {
-     e.preventDefault();
-     await axios.post("http://localhost:6060/childs", {
-       img: state.img,
-       name: state.name,
-       age: state.age
-     })
-   }
+  const postChild = async (e) => {
+    e.preventDefault();
+    await axios.post("http://localhost:6060/childs", {
+      img: state.img,
+      name: state.name,
+      age: state.age
+    })
+  }
+
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -54,7 +54,7 @@ const Add = () => {
         <title>Add</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <form action="" onSubmit={postChild}>
+      <form action="" onSubmit={(postChild)}>
         <Box
           sx={{
             "& > :not(style)": { m: 1, width: "25ch" },
@@ -66,6 +66,7 @@ const Add = () => {
             id="outlined-basic"
             label="Outlined"
             variant="outlined"
+            name="img"
             {...register("img")}
             onChange={handleChange}
           />
@@ -76,6 +77,7 @@ const Add = () => {
             id="filled-basic"
             label="Filled"
             variant="filled"
+            name="name"
             {...register("name")}
             onChange={handleChange}
           />
@@ -87,6 +89,7 @@ const Add = () => {
             label="Standard"
             variant="standard"
             type={"number"}
+            name="age"
             {...register("age")}
             onChange={handleChange}
           />

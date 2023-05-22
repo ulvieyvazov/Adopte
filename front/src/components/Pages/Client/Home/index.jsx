@@ -1,33 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.scss";
 import img from "../../../assets/family.png";
 import CustomizedAccordions from "../../Accordion";
 import { useState } from "react";
-import axios from "axios";
 import Carousel from "nuka-carousel";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const Home = () => {
-  const [value, setValue] = useState("");
+  const navigate = useNavigate()
+  const [sort, setSort] = useState('sorting')
+
+  const [value, setValue] = useState('');
   const [data, setData] = useState([]);
 
 
-  
   const deletData = async (id) => {
     await axios.delete(`http://localhost:6060/childs/${id}`);
     await getData();
   };
-  
+
   const getData = async () => {
     const res = await axios.get("http://localhost:6060/childs");
-    console.log(res.data);
     setData(
       res.data.filter((item) =>
         item.name.toLowerCase().includes(value.toLowerCase())
       )
+      
     );
   };
-  useState(() => {
+
+  const handleSort = () => {
+    let sortData = []
+
+    sortData = [...data].sort((a,b)=>{
+      setSort('sorting');
+      return(a.age - b.age)
+    })
+
+    setData(sortData)
+  }
+
+  useEffect(() => {
     getData();
   }, [value]);
 
@@ -104,11 +120,12 @@ const Home = () => {
 
               <button>Find More Waiting Children</button>
             </div>
-              <input type="text" value={value} onChange={(e)=>setValue(e.target.value)} />
+            <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
+            <button onClick={handleSort}>Sort</button>
             <div className="cart">
               {data.map((d) => (
                 <div className="cart-child" key={d._id}>
-                  <img src={d.img} alt="" />
+                  <img key={d.name} src={d.img} alt="" onClick={() => navigate(`/${d.name}`)} />
                   <h2 style={{ display: "inline", margin: "0 20px" }}>
                     {d.name}
                   </h2>
