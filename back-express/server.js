@@ -47,7 +47,8 @@ app.get("/childs", async (req, res) => {
 
 app.get("/childs/:id", async (req, res) => {
   try {
-    const getToyId = await Child.findById({});
+    const getId = req.params.id
+    const getToyId = await Child.findById(getId);
     res.send(getToyId);
   } catch (err) {
     res.status(400).json({ message: err });

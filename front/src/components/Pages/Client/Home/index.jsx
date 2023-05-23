@@ -28,7 +28,7 @@ const Home = () => {
       res.data.filter((item) =>
         item.name.toLowerCase().includes(value.toLowerCase())
       )
-      
+
     );
   };
 
@@ -124,8 +124,8 @@ const Home = () => {
             <button onClick={handleSort}>Sort</button>
             <div className="cart">
               {data.map((d) => (
-                <div className="cart-child" key={d._id}>
-                  <img key={d.name} src={d.img} alt="" onClick={() => navigate(`/${d.name}`)} />
+                <div className="cart-child" key={d._id} onClick={() => navigate(`/${d._id}`)}>
+                  <img src={d.img} alt="" />
                   <h2 style={{ display: "inline", margin: "0 20px" }}>
                     {d.name}
                   </h2>
