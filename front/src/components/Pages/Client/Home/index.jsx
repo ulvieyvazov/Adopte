@@ -28,18 +28,17 @@ const Home = () => {
       res.data.filter((item) =>
         item.name.toLowerCase().includes(value.toLowerCase())
       )
-
     );
   };
-
+  
   const handleSort = () => {
     let sortData = []
-
+    
     sortData = [...data].sort((a,b)=>{
       setSort('sorting');
       return(a.age - b.age)
     })
-
+    
     setData(sortData)
   }
 
